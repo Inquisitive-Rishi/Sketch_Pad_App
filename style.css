@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(249, 247, 244);
+}
+
+.title {
+    display: flex;
+    padding-top: 40px;
+    font-size: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pads {
+    display: flex;
+    padding: 40px;
+}
+
+.func-pad {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    width: 300px;
+    height: 550px;
+    margin-right: auto;
+    margin-left: 150px;
+}
+
+.draw-pad {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 550px;
+    height: 550px;
+    margin-right: 150px;
+}
