@@ -1,4 +1,5 @@
 const drawPad = document.querySelector('.draw-pad')
+const btn = document.querySelector('.grid-count')
 
 const container = document.createElement('div');
 drawPad.appendChild(container);
@@ -19,17 +20,27 @@ function drawGrid(n) {
         container.appendChild(grid);
     }
 }
-drawGrid(100);
 
-const grids = document.querySelectorAll('#grid');
+function createCustomGrid() {
+    let input = parseInt(prompt("No:of grid - each side",10));
+    if (input > 100) {
+        return;
+    } else {
+        drawGrid(input);
+        const grids = document.querySelectorAll('#grid');
 
-grids.forEach((grid)=> {
-    grid.addEventListener('mouseover', ()=> {
+    grids.forEach((grid)=> {
+        grid.addEventListener('mouseover', ()=> {
         grid.classList.add('bgColor')
     })
-    grid.addEventListener('mouseleave', ()=> {
+        grid.addEventListener('mouseleave', ()=> {
         setTimeout(() => {
             grid.classList.remove('bgColor')
         }, 200);
+        })
     })
-})
+    }
+}
+
+btn.addEventListener('click',createCustomGrid);
+
