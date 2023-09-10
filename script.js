@@ -19,7 +19,7 @@ function drawGrid(n) {
         container.appendChild(grid);
     }
 }
-drawGrid(10);
+drawGrid(100);
 
 const grids = document.querySelectorAll('#grid');
 
@@ -28,6 +28,8 @@ grids.forEach((grid)=> {
         grid.classList.add('bgColor')
     })
     grid.addEventListener('mouseleave', ()=> {
-        grid.classList.remove('bgColor');
+        setTimeout(() => {
+            grid.classList.remove('bgColor')
+        }, 200);
     })
 })
