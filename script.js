@@ -1,24 +1,16 @@
-const container = document.querySelector('.draw-pad');
-
-// function drawGrid(n) {
-//     for (let i = 0; i < n; i++) {
-//         const box = document.createElement('div');
-//         box.style.display = 'flex';
-        
-//     }
-// }
+const drawPad = document.querySelector('.draw-pad')
 
 
-for (let i = 0; i < 16; i++) {
-    const box = document.createElement('div');
-    box.style.display = 'flex';
-    box.style.flexDirection = "column";
-    container.appendChild(box);
-    for (let j = 0; j < 16; j++) {
+function drawGrid(n) {
+    for (let i = 0; i < (n*n); i++) {
         const grid = document.createElement('div');
-        grid.style.height = '40px';
-        grid.style.width = '40px';
-        grid.style.border = '1px solid black';
-        box.appendChild(grid);
+        grid.style.boxSizing = 'border-box';
+        grid.style.border = '.2px solid black';
+        grid.style.height = `${600/n}px`;
+        grid.style.width = `${600/n}px`;
+        grid.style.aspectRatio = 1;
+        drawPad.appendChild(grid);
     }
 }
+
+drawGrid(5);
