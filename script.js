@@ -10,7 +10,7 @@ container.setAttribute('class', 'container');
 
 function drawGrid(n) {
     for (let i = 0; i < (n*n); i++) {
-        const grid = document.createElement('div');
+        const grid = document.createElement('div'); 
         grid.style.boxSizing = 'border-box';
         grid.style.border = '1px solid black';
         grid.style.height = `${600/n}px`;
@@ -21,15 +21,23 @@ function drawGrid(n) {
     }
 }
 
+
 function createCustomGrid() {
     let input = parseInt(prompt("No:of grid - each side",10));
     if (input > 100) {
         return;
     } else {
-        drawGrid(input);
+        drawGrid(input)
+        let total_grids = input**2;
         const grids = document.querySelectorAll('#grid');
-
-    grids.forEach((grid)=> {
+        if (grids.length > total_grids) {
+            for (let i = 0; i < (grids.length-total_grids); i++) {
+                grids[i].remove();
+            }
+        }
+        
+        //if container is empty, draw grids if not create grids.
+    grids.forEach((grid) => {
         grid.addEventListener('mouseover', ()=> {
         grid.classList.add('bgColor')
     })
@@ -42,5 +50,10 @@ function createCustomGrid() {
     }
 }
 
-btn.addEventListener('click',createCustomGrid);
+function removeGrids() {
+    for (let i = 0; i < total_grids; i++) {
+        grids[i].remove();
+    } 
+}
 
+btn.addEventListener('click',createCustomGrid);
