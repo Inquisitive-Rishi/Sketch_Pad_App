@@ -24,13 +24,6 @@ body {
     gap: 100px;
 }
 
-.func-pad {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 25px;
-    width: 300px;
-    height: 600px;
-}
-
 .draw-pad {
     border: 10px solid rgb(206, 206, 206);
     width: 600px;
@@ -41,8 +34,21 @@ body {
     background-color: black;
 } 
 
-.grid-count {
+.dim-btn {
+    display: flex;
+    gap: 10px;
+    width: 600px;
+}
+
+.btn {
     padding: 10px;
-    background-color: rgb(95, 95, 209);
-    margin-bottom: 30px;
+    background-color: rgb(95, 95, 209); 
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.clear-grd {
+    flex: 1;
+    background-color: rgb(243, 44, 44);
+    color: white;
 }

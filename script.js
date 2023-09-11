@@ -1,12 +1,28 @@
 const drawPad = document.querySelector('.draw-pad')
-const btn = document.querySelector('.grid-count')
 
 const container = document.createElement('div');
 drawPad.appendChild(container);
 
+const two = document.querySelector('.two');
+const four = document.querySelector('.four');
+const sixteen = document.querySelector('.sixteen');
+const thirtyTwo = document.querySelector('.thirty-two');
+const sixtyFour = document.querySelector('.sixty-four');
+const clearGrd = document.querySelector('.clear-grd');
+
+
+two.addEventListener('click', ()=> createCustomGrid(2));
+four.addEventListener('click', ()=> createCustomGrid(4));
+sixteen.addEventListener('click', ()=> createCustomGrid(16));
+thirtyTwo.addEventListener('click', ()=> createCustomGrid(32));
+sixtyFour.addEventListener('click', ()=> createCustomGrid(64));
+clearGrd.addEventListener('click', ()=> window.location.reload())
+
+
 container.style.display = 'flex';
 container.style.flexWrap = 'wrap';
 container.setAttribute('class', 'container');
+
 
 function drawGrid(n) {
     for (let i = 0; i < (n*n); i++) {
@@ -22,8 +38,8 @@ function drawGrid(n) {
 }
 
 
-function createCustomGrid() {
-    let input = parseInt(prompt("No:of grid - each side",10));
+function createCustomGrid(x) {
+    let input = parseInt(x);
     if (input > 100) {
         return;
     } else {
@@ -50,10 +66,4 @@ function createCustomGrid() {
     }
 }
 
-function removeGrids() {
-    for (let i = 0; i < total_grids; i++) {
-        grids[i].remove();
-    } 
-}
 
-btn.addEventListener('click',createCustomGrid);
