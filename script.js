@@ -10,6 +10,7 @@ const thirtyTwo = document.querySelector('.thirty-two');
 const sixtyFour = document.querySelector('.sixty-four');
 const clearGrd = document.querySelector('.clear-grd');
 
+const tglGrid = document.querySelector('.tgl-grd');
 
 two.addEventListener('click', ()=> createCustomGrid(2));
 four.addEventListener('click', ()=> createCustomGrid(4));
@@ -51,7 +52,6 @@ function createCustomGrid(x) {
                 grids[i].remove();
             }
         }
-        
         //if container is empty, draw grids if not create grids.
     grids.forEach((grid) => {
         grid.addEventListener('mouseover', ()=> {
@@ -65,5 +65,3 @@ function createCustomGrid(x) {
     })
     }
 }
-
-

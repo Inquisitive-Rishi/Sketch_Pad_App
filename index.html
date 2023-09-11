@@ -8,15 +8,35 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- <div class="title">Sketch Pad</div> -->
-    <div class="dim-btn">
+    <div class="title">
+        <div class="t one">ETCH</div>
+        <div class="t two">A</div>
+        <div class="t three">SKETCH</div>
+    </div>
+    <!-- draw pad starts here -->
+    <div class="main">
+        <div class="dim-btn">
         <button class="btn two">2 x 2</button>
         <button class="btn four">4 x 4</button>
         <button class="btn sixteen">16 x 16</button>
         <button class="btn thirty-two">32 x 32</button>
         <button class="btn sixty-four">64 x 64</button>
-        <button class="btn clear-grd">clear</button>
+        </div>
+        <div class="draw-pad"></div>
+        <div class="clr-btns">
+            <button class="clr-btn red">red</button>
+            <button class="clr-btn blue">blue</button>
+            <button class="clr-btn brown">brown</button>
+            <button class="clr-btn orange">orange</button>
+            <button class="clr-btn purple">purple</button>
+        </div>
     </div>
-    <div class="draw-pad"></div>
+    <!-- draw pad ends here -->
+        <div class="pad func-pad">
+        <button class="func-btn tgl-grd">toggle grid</button>
+        <button class="func-btn rndm-clr">rainbow mode</button>
+        <button class="func-btn eraser">eraser</button>
+        <button class="func-btn clear-grd">clear</button>
+        </div>
 </body>
 </html>

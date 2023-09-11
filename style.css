@@ -8,21 +8,53 @@ body {
     display: flex;
     padding: 20px;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     background-color: rgb(249, 247, 244);
 }
 
 .title {
-    font-size: 40px;
-    padding-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+    color:rgb(21, 21, 21)
 }
 
-.pads {
-    display: flex;
-    gap: 100px;
+.t:hover {
+    color:blueviolet
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pad {
+    height: 600px;
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.func-btn {
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+
+.clear-grd {
+    background-color: rgb(243, 44, 44);
+    color: white;
+}
+
 
 .draw-pad {
     border: 10px solid rgb(206, 206, 206);
@@ -40,15 +72,33 @@ body {
     width: 600px;
 }
 
+.clr-btns {
+    display: flex;
+    gap: 10px;
+    width: 600px;
+}
+
 .btn {
+    flex: 1;
     padding: 10px;
     background-color: rgb(95, 95, 209); 
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-.clear-grd {
+.clr-btn {
     flex: 1;
-    background-color: rgb(243, 44, 44);
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.toggle-grd {
+    border: 1px solid black;
+}
+
+.rndm-clr:hover {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
     color: white;
+    font-weight: 700;
 }
