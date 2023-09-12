@@ -3,7 +3,7 @@ const drawPad = document.querySelector('.draw-pad')
 const container = document.createElement('div');
 drawPad.appendChild(container);
 
-const two = document.querySelector('.two');
+const two = document.querySelector('#two');
 const four = document.querySelector('.four');
 const sixteen = document.querySelector('.sixteen');
 const thirtyTwo = document.querySelector('.thirty-two');
