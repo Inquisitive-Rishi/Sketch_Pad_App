@@ -25,6 +25,8 @@ container.style.flexWrap = 'wrap';
 container.setAttribute('class', 'container');
 
 
+let draw = false;
+
 function drawGrid(n) {
     for (let i = 0; i < (n*n); i++) {
         const grid = document.createElement('div'); 
@@ -52,15 +54,28 @@ function createCustomGrid(x) {
                 grids[i].remove();
             }
         }
-
+        
         tglGrid.addEventListener('click', ()=> {
             grids.forEach(grid => grid.classList.toggle('crt-brd'));
         })
         //if container is empty, draw grids if not create grids.
-    grids.forEach((grid) => {
-        grid.addEventListener('mousedown', ()=> {
-        grid.classList.add('bgColor')
-    })
-    })
+        grids.forEach((grid) => {
+            grid.addEventListener('mousedown',startDraw);
+            grid.addEventListener('mouseup', stopDraw);
+            grid.addEventListener('mousemove',()=>drawNow(grid));
+        })
     }
 };
+
+function startDraw() {
+    draw = true;
+}
+
+function stopDraw() {
+    draw = false;
+}
+
+function drawNow(x) {
+    if (!draw) return;
+    x.classList.add('bgColor');
+}
