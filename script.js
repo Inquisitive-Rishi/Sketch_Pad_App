@@ -29,7 +29,7 @@ function drawGrid(n) {
     for (let i = 0; i < (n*n); i++) {
         const grid = document.createElement('div'); 
         grid.style.boxSizing = 'border-box';
-        grid.style.border = '1px solid black';
+        // grid.style.border = '1px solid black';
         grid.style.height = `${600/n}px`;
         grid.style.width = `${600/n}px`;
         grid.style.aspectRatio = 1;
@@ -52,6 +52,10 @@ function createCustomGrid(x) {
                 grids[i].remove();
             }
         }
+
+        tglGrid.addEventListener('click', ()=> {
+            grids.forEach(grid => grid.classList.toggle('crt-brd'));
+        })
         //if container is empty, draw grids if not create grids.
     grids.forEach((grid) => {
         grid.addEventListener('mouseover', ()=> {
