@@ -49,6 +49,10 @@ body {
     background-color: white;
 }
 
+.func-btn:hover {
+    transform: scale(1.1);
+}
+
 
 .clear-grd {
     background-color: rgb(243, 44, 44);
@@ -60,11 +64,8 @@ body {
     border: 10px solid rgb(206, 206, 206);
     width: 600px;
     height: 600px;
+    margin-bottom: 5px;
 }
-
-/* .bgColor {
-    background-color: black;
-}  */
 
 .dim-btn {
     display: flex;
@@ -86,12 +87,26 @@ body {
     margin-bottom: 10px;
 }
 
+.btn:hover {
+    color: white;
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+.clr-btn:hover {
+    color: white;
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
 .clr-btn {
     flex: 1;
     padding: 10px;
     font-size: 1.1rem;
     margin-bottom: 10px;
+    color: white;
 }
+
 
 .crt-brd{
     border: 1px solid black;
@@ -103,3 +118,22 @@ body {
     font-weight: 700;
 }
 
+.red {
+    background-color: #c23616;
+}
+
+.blue {
+    background-color: #40739e;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.orange {
+    background-color: #ff793f; 
+}
+
+.purple {
+    background-color: blueviolet;
+}

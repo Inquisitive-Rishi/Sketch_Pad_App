@@ -32,11 +32,11 @@ const random = document.querySelector('.rndm-clr');
 
 
 eraser.addEventListener('click',()=> defClr = 'rgb(249, 247, 244)');
-red.addEventListener('click',()=> defClr = 'red');
-blue.addEventListener('click',()=> defClr = 'blue');
+red.addEventListener('click',()=> defClr = '#c23616');
+blue.addEventListener('click',()=> defClr = '#40739e');
 brown.addEventListener('click',()=> defClr = 'brown');
-orange.addEventListener('click',()=> defClr = 'orange');
-purple.addEventListener('click',()=> defClr = 'purple');
+orange.addEventListener('click',()=> defClr = '#ff793f');
+purple.addEventListener('click',()=> defClr = 'blueviolet');
 random.addEventListener('click',()=> defClr = `hsl(${Math.random()*360},100%,50%)`);
 
 
