@@ -137,3 +137,10 @@ body {
 .purple {
     background-color: blueviolet;
 }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
