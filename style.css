@@ -47,14 +47,27 @@ body {
 
 .settings button {
     font-size: 1rem;
+    font-weight: 600;
     padding: 1rem;
     border: 0;
     outline: 0;
+    background-color: rgb(99, 241, 241);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
 
 .settings .reset {
     background-color: red;
     color: white;
+}
+
+.slider {
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.slider input {
+    width: 60%;
 }
 
 

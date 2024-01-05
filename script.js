@@ -1,5 +1,8 @@
 const pad = document.querySelector('.pad')
 const gridContainer = document.querySelector('.grid-container')
+const value = document.querySelector('.slider p')
+const slider = document.querySelector('.slider input')
+
 
 const drawGrid = (n) => {
     const containerDim = 600;
@@ -13,3 +16,8 @@ const drawGrid = (n) => {
 }
 
 drawGrid(5)
+
+value.textContent = slider.value + " x " + slider.value;
+slider.oninput = function() {
+    value.textContent = this.value + " x " + this.value;
+}
