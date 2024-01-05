@@ -18,6 +18,7 @@ body {
     margin-top: 25px;
     width: 1000px;
     height: 600px;
+    margin-bottom: 20px;
 }
 
 .pad, .settings {
@@ -31,12 +32,30 @@ body {
 }
 
 .settings {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     border-radius: 10px;
     width: 300px;
+    justify-content: space-around;
 }
 
 .grid-container {
     display: flex;
     flex-wrap: wrap;
 }
+
+.settings button {
+    font-size: 1rem;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+}
+
+.settings .reset {
+    background-color: red;
+    color: white;
+}
+
+
 
