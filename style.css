@@ -1,146 +1,42 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     height: 100vh;
     display: flex;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: rgb(249, 247, 244);
-}
-
-.title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 120px;
-    color:rgb(21, 21, 21)
-}
-
-.t:hover {
-    color:blueviolet
-}
-
-.main {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 1000px;
+    height: 600px;
+}
+
+.pad, .settings {
+    height: 100%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
 
 .pad {
     height: 600px;
-    width: 14%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 20px;
+    width: 600px;
+}
+
+.settings {
     border-radius: 10px;
+    width: 300px;
 }
 
-.func-btn {
-    display: block;
-    padding: 10px;
-    font-size: 1.2rem;
-    background-color: white;
-}
-
-.func-btn:hover {
-    transform: scale(1.1);
-}
-
-
-.clear-grd {
-    background-color: rgb(243, 44, 44);
-    color: white;
-}
-
-
-.draw-pad {
-    border: 10px solid rgb(206, 206, 206);
-    width: 600px;
-    height: 600px;
-    margin-bottom: 5px;
-}
-
-.dim-btn {
+.grid-container {
     display: flex;
-    gap: 10px;
-    width: 600px;
+    flex-wrap: wrap;
 }
 
-.clr-btns {
-    display: flex;
-    gap: 10px;
-    width: 600px;
-}
-
-.btn {
-    flex: 1;
-    padding: 10px;
-    background-color: rgb(95, 95, 209); 
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.btn:hover {
-    color: white;
-    font-weight: 700;
-    transform: scale(1.1);
-}
-
-.clr-btn:hover {
-    color: white;
-    font-weight: 700;
-    transform: scale(1.1);
-}
-
-.clr-btn {
-    flex: 1;
-    padding: 10px;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: white;
-}
-
-
-.crt-brd{
-    border: 1px solid black;
-}
-
-.rndm-clr:hover {
-    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
-    color: white;
-    font-weight: 700;
-}
-
-.red {
-    background-color: #c23616;
-}
-
-.blue {
-    background-color: #40739e;
-}
-
-.brown {
-    background-color: brown;
-}
-
-.orange {
-    background-color: #ff793f; 
-}
-
-.purple {
-    background-color: blueviolet;
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-}
