@@ -15,9 +15,14 @@ const drawGrid = (n) => {
     }
 }
 
-drawGrid(5)
-
 value.textContent = slider.value + " x " + slider.value;
+drawGrid(slider.value)
+
 slider.oninput = function() {
+    while(gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild)
+    }
+
     value.textContent = this.value + " x " + this.value;
+    drawGrid(this.value)
 }
