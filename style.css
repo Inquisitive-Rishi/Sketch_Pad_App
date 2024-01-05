@@ -70,5 +70,19 @@ body {
     width: 60%;
 }
 
+.disappear {
+    display: none;
+}
 
+.color-picker {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.color-picker input {
+    border: none;
+    outline: none;
+}
 
