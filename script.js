@@ -2,10 +2,14 @@ const gridContainer = document.querySelector('.grid-container')
 const value = document.querySelector('.slider p')
 const slider = document.querySelector('.slider input')
 const colorPicker = document.querySelector('.color-picker input')
-// const toggleGridBtn = document.querySelector('.toggle-grid')
+const toggleGridBtn = document.querySelector('.toggle-grid')
 
-let defaultColor = '#000000'
-let grids = document.querySelectorAll('.grid-container div')
+let currentColor = '#000000'
+
+colorPicker.oninput = () => {
+    currentColor = colorPicker.value;
+    console.log(currentColor);
+}
 
 const drawGrid = (n) => {
     const containerDim = 600;
@@ -15,11 +19,20 @@ const drawGrid = (n) => {
         grid.style.width = `${containerDim/n}px`
         grid.style.border = '.3px solid black'
         gridContainer.appendChild(grid)
-
-        // toggleGridBtn.addEventListener('click', () => {
-        //     grid.classList.toggle('disappear')
-        // })
     }
+    
+    const grids = document.querySelectorAll('.grid-container div')
+    toggleGridBtn.addEventListener('click', () => {
+        grids.forEach(grid => grid.classList.toggle('disappear'))
+    })
+    // unable to toggle grid view
+
+
+    grids.forEach(grid => {
+        grid.addEventListener('click', () => {
+            grid.style.backgroundColor = currentColor;
+        })
+    })    
 }
 
 value.textContent = slider.value + " x " + slider.value;
@@ -33,9 +46,5 @@ slider.oninput = function() {
     drawGrid(this.value)
 }
 
-colorPicker.oninput = () => {
-    defaultColor = colorPicker.value;
-    console.log(defaultColor);
-}
 
 
