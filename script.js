@@ -42,6 +42,7 @@ const drawGrid = (n) => {
     resetBtn.addEventListener('click', () => {
         grids.forEach(grid => {
             grid.style.backgroundColor = 'white'
+            colorPicker.value = '#000'
         })
     })
 }
