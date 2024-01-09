@@ -4,6 +4,10 @@ const slider = document.querySelector('.slider input')
 const eraser = document.querySelector('.eraser')
 const colorPicker = document.querySelector('.color-picker input')
 const toggleGridBtn = document.querySelector('.toggle-grid')
+const footer = document.querySelector('footer')
+const resetBtn = document.querySelector('.reset')
+
+let draw = false;
 
 let currentColor = '#000000'
 
@@ -22,17 +26,32 @@ const drawGrid = (n) => {
     }
     
     const grids = document.querySelectorAll('.grid-container div')
-    toggleGridBtn.addEventListener('click', () => {
-        grids.forEach(grid => grid.classList.toggle('disappear'))
-    })
-    // unable to toggle grid view
 
+    toggleGridBtn.addEventListener('click', () => {
+        grids.forEach(grid => {
+            grid.classList.toggle('disappear');
+        })
+    })
 
     grids.forEach(grid => {
-        grid.addEventListener('mouseover', () => {
-            grid.style.backgroundColor = currentColor;
+        grid.addEventListener('mousedown',() => draw = true);
+        grid.addEventListener('mouseup',() => draw = false);
+        grid.addEventListener('mousemove',() => drawNow(grid));
+    })
+
+    resetBtn.addEventListener('click', () => {
+        grids.forEach(grid => {
+            grid.style.backgroundColor = 'white'
         })
-    })    
+    })
+}
+
+function drawNow(x) {
+    if (!draw) {
+        return false;
+    } else {
+        x.style.backgroundColor = currentColor;
+    }
 }
 
 value.textContent = slider.value + " x " + slider.value;
@@ -49,3 +68,5 @@ slider.oninput = function() {
 eraser.addEventListener('click', () => {
     currentColor = 'white'
 })
+
+footer.textContent = `Copyright © Rishi Raj ${new Date().getFullYear()}`
