@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector('.grid-container')
 const value = document.querySelector('.slider p')
 const slider = document.querySelector('.slider input')
+const eraser = document.querySelector('.eraser')
 const colorPicker = document.querySelector('.color-picker input')
 const toggleGridBtn = document.querySelector('.toggle-grid')
 
@@ -8,7 +9,6 @@ let currentColor = '#000000'
 
 colorPicker.oninput = () => {
     currentColor = colorPicker.value;
-    console.log(currentColor);
 }
 
 const drawGrid = (n) => {
@@ -29,7 +29,7 @@ const drawGrid = (n) => {
 
 
     grids.forEach(grid => {
-        grid.addEventListener('click', () => {
+        grid.addEventListener('mouseover', () => {
             grid.style.backgroundColor = currentColor;
         })
     })    
@@ -46,5 +46,6 @@ slider.oninput = function() {
     drawGrid(this.value)
 }
 
-
-
+eraser.addEventListener('click', () => {
+    currentColor = 'white'
+})
