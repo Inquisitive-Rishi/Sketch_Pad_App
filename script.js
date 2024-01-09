@@ -21,17 +21,17 @@ const drawGrid = (n) => {
         const grid = document.createElement('div')
         grid.style.height = `${containerDim/n}px`
         grid.style.width = `${containerDim/n}px`
-        grid.style.border = '.3px solid black'
+        // grid.style.border = '.3px solid black'
         gridContainer.appendChild(grid)
     }
     
     const grids = document.querySelectorAll('.grid-container div')
 
-    toggleGridBtn.addEventListener('click', () => {
-        grids.forEach(grid => {
-            grid.classList.toggle('disappear');
-        })
-    })
+    // toggleGridBtn.addEventListener('click', () => {
+    //     grids.forEach(grid => {
+    //         grid.classList.toggle('disappear');
+    //     })
+    // })
 
     grids.forEach(grid => {
         grid.addEventListener('mousedown',() => draw = true);

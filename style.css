@@ -45,6 +45,7 @@ body {
     cursor:no-drop;
     display: flex;
     flex-wrap: wrap;
+    outline: 10px solid #dcd9d9;
 }
 
 .settings button {
